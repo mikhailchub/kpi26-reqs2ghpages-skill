@@ -1,41 +1,36 @@
-# kpi26-reqs2ghpages-skill
+# KPI 2026 Requirements to GitHub Pages Skill
 
-Skill-only repository for the **Requirements To GitHub Pages** skill.
+This repository contains the source files for the `requirements-to-github-pages` skill.
 
-This skill takes an existing markdown requirements file for a small web application and helps implement it as a GitHub Pages project. It is intended for coursework where the topic and requirements already exist, and the implementation must stay within GitHub Pages constraints.
+## Purpose
+
+The skill takes an existing markdown requirements document as input and helps implement a small web application that is feasible on GitHub Pages.
+
+It is designed for the 2026 KPI coursework format where students:
+- write requirements first,
+- analyze feasibility and constraints,
+- implement a small web app,
+- deploy it to GitHub Pages.
 
 ## What the skill does
 
-- reads an existing markdown requirements document
-- checks feasibility against GitHub Pages constraints
-- warns about requirements that need compromises or an external backend
-- chooses the simplest viable architecture
-- documents architecture decisions as SDR files
-- decides between `localStorage` and `IndexedDB`
-- adds demo data and a `Reset demo data` control by default
-- updates an existing repository and prepares GitHub Pages deployment via GitHub Actions
-
-## What the skill does not do
-
-- does not invent a project theme
-- does not write requirements from scratch
-- does not silently rewrite requirements
-- does not pretend that secure auth, payments, or sensitive transactions belong in a pure GitHub Pages app
+- analyzes feasibility of existing requirements for GitHub Pages;
+- warns about requirements that need a backend or sensitive data handling;
+- chooses a suitable frontend stack after requirements analysis;
+- decides between `localStorage` and `IndexedDB` as part of architecture design;
+- records architecture decisions as SDRs;
+- generates demo data and a `Reset demo data` capability by default;
+- implements the application in the repository;
+- updates GitHub Pages deployment workflow.
 
 ## Repository contents
 
 - `SKILL.md` - main skill instructions
 - `agents/openai.yaml` - UI metadata
-- `references/` - decision and deployment guidance
+- `references/` - supporting guidance and templates
 - `assets/` - GitHub Pages workflow templates
-
-## Suggested use
-
-1. Create a new project repository from a template repository.
-2. Add the student's markdown requirements file.
-3. Invoke the skill in that repository.
-4. Let the skill analyze feasibility, document SDRs, implement the app, and prepare Pages deployment.
 
 ## Notes
 
-This repository stores the source of the skill. Packaged `skill.zip` distributions can be generated from the source when needed.
+This repository is the source of truth for the skill itself.
+For starting application repositories, use a separate template repository.
